@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Room",
+  "type": "object",
+  "required": ["id", "roomCode", "hostUserId", "status", "createdAt"],
+  "properties": {
+    "id": { "type": "string", "format": "uuid" },
+    "roomCode": { "type": "string", "minLength": 4, "maxLength": 12 },
+    "hostUserId": { "type": "string", "format": "uuid" },
+    "status": {
+      "type": "string",
+      "enum": ["lobby", "active", "completed"]
+    },
+    "createdAt": { "type": "string", "format": "date-time" }
+  },
+  "additionalProperties": false
+}

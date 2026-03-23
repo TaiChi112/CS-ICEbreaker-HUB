@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LeaderboardEntry",
+  "type": "object",
+  "required": ["playerId", "displayName", "score"],
+  "properties": {
+    "playerId": { "type": "string", "format": "uuid" },
+    "displayName": { "type": "string" },
+    "score": { "type": "integer", "minimum": 0 }
+  },
+  "additionalProperties": false
+}
