@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GenerateQuestionsRequest",
+  "type": "object",
+  "required": ["host_player_id", "topic"],
+  "properties": {
+    "host_player_id": { "type": "string", "format": "uuid" },
+    "topic": { "type": "string", "minLength": 1, "maxLength": 160 },
+    "batch_size": { "type": "integer", "minimum": 1, "maximum": 20, "default": 8 }
+  },
+  "additionalProperties": false
+}
