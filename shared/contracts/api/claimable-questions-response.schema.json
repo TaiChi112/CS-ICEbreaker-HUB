@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ClaimableQuestionsResponse",
+  "type": "object",
+  "required": ["room_code", "questions"],
+  "properties": {
+    "room_code": { "type": "string" },
+    "questions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["question_id", "round_id", "prompt"],
+        "properties": {
+          "question_id": { "type": "string", "format": "uuid" },
+          "round_id": { "type": "string", "format": "uuid" },
+          "prompt": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
