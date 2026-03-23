@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "WebSocketEventEnvelope",
+  "type": "object",
+  "required": ["eventType", "payload"],
+  "properties": {
+    "eventType": {
+      "type": "string",
+      "description": "Event identifier, for example room.joined"
+    },
+    "payload": {
+      "type": "object"
+    },
+    "occurredAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": false
+}
